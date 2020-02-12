@@ -25,7 +25,7 @@ void Inventory::sell()
 	{
   m_in_stock--;
 	}
-	else cerr << "Sorry, that item is out of stock.\n";
+	else std::cerr << "Sorry, that item is out of stock.\n";
 }
 
 /*
