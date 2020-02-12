@@ -5,6 +5,10 @@
 using std::string;
 using std::ostream;
 
+/*
+ * The Inventory class represents the current stock of a single item.
+ * The item can be set, sold, or queried using the public funtions.
+*/
 class Inventory
 {
   private:

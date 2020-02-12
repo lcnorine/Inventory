@@ -4,7 +4,11 @@
 
 using std::string;
 using std::ostream;
-  
+
+/*
+ * Constructor for an inventory item.
+ * Takes the item's name, price and current count.
+ */
 Inventory::Inventory(string name, float price, int count)
 {
   m_name = name;
@@ -12,11 +16,21 @@ Inventory::Inventory(string name, float price, int count)
   m_in_stock = count;
 }
 
+/*
+ * sells one of the item
+ */
 void Inventory::sell()
 {
+	if (m_in_stock>0)
+	{
   m_in_stock--;
+	}
+	else cerr << "Sorry, that item is out of stock.\n";
 }
 
+/*
+ *prints the name and price of the item to the stream
+ */
 ostream& operator<<(ostream& stream, const Inventory& item)
 {
   stream << item.m_name 
