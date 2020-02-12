@@ -1,4 +1,4 @@
 language: cpp
 os: linux
 script:
-        - g++ main.cpp -o main.o -Wall
+        - make
